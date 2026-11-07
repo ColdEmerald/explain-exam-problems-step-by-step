@@ -1,0 +1,12 @@
+interface:
+  display_name: "考研式逐步讲题"
+  short_description: "按题型、突破口、逐步推导、思维复盘与变式训练讲解理工科题目；支持简明/标准/深度三级模式"
+  default_prompt: "使用 $explain-exam-problems-step-by-step 按我的固定流程详细讲解这道题，重点说明每一步为什么这样想。"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  - antigravity
+  allow_implicit_invocation: true
