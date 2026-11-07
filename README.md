@@ -40,7 +40,8 @@ explain-exam-problems-step-by-step/
 ├── SKILL.md                 # 技能主体：行为规范与固定讲解流程
 ├── agents/
 │   └── agent.yaml           # 展示信息、默认调用提示词与启用策略
-└── README.md                # 项目说明文档
+├── README.md                # 项目说明文档
+└── LICENSE                  # MIT 许可证
 ```
 
 ## 安装方法
@@ -145,6 +146,7 @@ $SKILLS_HOME/explain-exam-problems-step-by-step/agents/agent.yaml
 - **P3** `SKILL.md` 各节增加 HTML 注释锚点，便于维护与局部覆盖。
 - **P3** `agents/openai.yaml` 重命名为 `agents/agent.yaml`，消除与多平台支持的命名歧义。
 - **文档** 更新 README 以反映新模式、新触发词和 Antigravity 平台支持说明。
+- **许可证** 补充 MIT 许可证文件（`LICENSE`），明确使用、修改、分发与再许可授权范围。
 
 #### 1.0.0（2026-07-11）
 
@@ -165,4 +167,6 @@ $SKILLS_HOME/explain-exam-problems-step-by-step/agents/agent.yaml
 
 ## 许可证
 
-当前版本未附加独立许可证文件。如需在团队或公开项目中再分发，请先确认技能源作者的授权范围。建议后续版本补充 MIT 或 CC-BY-4.0 许可证以规范社区使用。
+本项目采用 [MIT](LICENSE) 许可证，著作权归 ColdEmerald 所有。
+
+在保留本许可声明和版权声明的前提下，允许他人使用、复制、修改、合并、发布、分发、再许可及销售本软件的副本，并允许其基于本软件进行商业使用。软件按"现状"提供，不附带任何明示或默示担保。
