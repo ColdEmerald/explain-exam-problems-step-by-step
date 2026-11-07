@@ -1,0 +1,48 @@
+{
+  "id": "special-cases/02-program-trace",
+  "title": "编程题的逐行执行跟踪",
+  "subject": "编程题",
+  "tier": "A",
+  "mode": "standard",
+  "input": "input.md",
+  "reference": "reference.md",
+  "required_sections": [
+    "题型判断",
+    "第一眼突破口",
+    "逐步推导",
+    "解题思维复盘",
+    "核心套路总结",
+    "易错点",
+    "更快捷的方法",
+    "同类型变式题"
+  ],
+  "absent_sections": [],
+  "required_keywords": [
+    "输出",
+    "变量",
+    "循环",
+    "跟踪"
+  ],
+  "forbidden_keywords": [
+    "显然",
+    "容易得",
+    "同理可得"
+  ],
+  "key_facts": [
+    {
+      "desc": "给出输出结果 16",
+      "any_of": [
+        "16"
+      ]
+    },
+    {
+      "desc": "给出冲激/中间追踪值",
+      "any_of": [
+        "-1",
+        "3"
+      ]
+    }
+  ],
+  "token_facts": [],
+  "absent_facts": []
+}

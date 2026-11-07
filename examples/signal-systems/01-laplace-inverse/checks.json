@@ -1,0 +1,58 @@
+{
+  "id": "signal-systems/01-laplace-inverse",
+  "title": "双边拉普拉斯逆变换与收敛域",
+  "subject": "信号与系统",
+  "tier": "A",
+  "mode": "standard",
+  "input": "input.md",
+  "reference": "reference.md",
+  "required_sections": [
+    "题型判断",
+    "第一眼突破口",
+    "逐步推导",
+    "解题思维复盘",
+    "核心套路总结",
+    "易错点",
+    "更快捷的方法",
+    "同类型变式题"
+  ],
+  "absent_sections": [],
+  "required_keywords": ["收敛域", "因果", "稳定"],
+  "forbidden_keywords": ["显然", "容易得", "同理可得"],
+  "key_facts": [
+    {
+      "desc": "识别出两个极点 -1 与 -2",
+      "any_of": ["s=-1", "s=-2", "-1与-2", "-1 和 -2", "-1、-2", "极点-1", "极点 -1"]
+    },
+    {
+      "desc": "给出 ROC Re(s)>-1 的情况",
+      "any_of": ["Re(s)>-1", "Re(s) > -1", "\\mathrm{Re}(s)>-1", "Re{s}>-1"]
+    },
+    {
+      "desc": "给出 ROC -2<Re(s)<-1 的情况",
+      "any_of": ["-2<Re(s)<-1", "-2 < Re(s) < -1", "-2<\\mathrm{Re}(s)<-1"]
+    },
+    {
+      "desc": "给出 ROC Re(s)<-2 的情况",
+      "any_of": ["Re(s)<-2", "Re(s) < -2", "\\mathrm{Re}(s)<-2"]
+    }
+  ],
+  "token_facts": [
+    {
+      "desc": "情况 1 为因果信号（含 e^{-t}u(t) 与 e^{-2t}u(t)）",
+      "all_of": ["e^{-t}u(t)", "e^{-2t}u(t)"],
+      "none_of": []
+    },
+    {
+      "desc": "情况 2 为双边信号（含 e^{-t}u(-t) 与 e^{-2t}u(t)）",
+      "all_of": ["e^{-t}u(-t)", "e^{-2t}u(t)"],
+      "none_of": []
+    },
+    {
+      "desc": "情况 3 为反因果信号（含 e^{-t}u(-t) 与 e^{-2t}u(-t)）",
+      "all_of": ["e^{-t}u(-t)", "e^{-2t}u(-t)"],
+      "none_of": []
+    }
+  ],
+  "absent_facts": []
+}

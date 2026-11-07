@@ -1,0 +1,59 @@
+{
+  "id": "signal-systems/04-stability-causality",
+  "title": "系统函数的因果性与稳定性判据",
+  "subject": "信号与系统",
+  "tier": "A",
+  "mode": "standard",
+  "input": "input.md",
+  "reference": "reference.md",
+  "required_sections": [
+    "题型判断",
+    "第一眼突破口",
+    "逐步推导",
+    "解题思维复盘",
+    "核心套路总结",
+    "易错点",
+    "更快捷的方法",
+    "同类型变式题"
+  ],
+  "absent_sections": [],
+  "required_keywords": [
+    "因果",
+    "稳定",
+    "收敛域",
+    "冲激响应"
+  ],
+  "forbidden_keywords": [
+    "显然",
+    "容易得",
+    "同理可得"
+  ],
+  "key_facts": [
+    {
+      "desc": "给出因果情形的冲激响应（衰减振荡形式）",
+      "any_of": [
+        "e^{-2t}",
+        "e^{-t}\\cos t",
+        "e^{-t}\\sin t"
+      ]
+    }
+  ],
+  "token_facts": [
+    {
+      "desc": "出现 e^{-2t} 衰减项",
+      "all_of": [
+        "e^{-2t}"
+      ],
+      "none_of": []
+    },
+    {
+      "desc": "出现振荡因子 cos/sin t",
+      "all_of": [
+        "cos",
+        "sin"
+      ],
+      "none_of": []
+    }
+  ],
+  "absent_facts": []
+}

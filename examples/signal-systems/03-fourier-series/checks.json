@@ -1,0 +1,59 @@
+{
+  "id": "signal-systems/03-fourier-series",
+  "title": "傅里叶级数与狄利克雷收敛条件",
+  "subject": "信号与系统",
+  "tier": "A",
+  "mode": "standard",
+  "input": "input.md",
+  "reference": "reference.md",
+  "required_sections": [
+    "题型判断",
+    "第一眼突破口",
+    "逐步推导",
+    "解题思维复盘",
+    "核心套路总结",
+    "易错点",
+    "更快捷的方法",
+    "同类型变式题"
+  ],
+  "absent_sections": [],
+  "required_keywords": [
+    "傅里叶级数",
+    "狄利克雷",
+    "收敛"
+  ],
+  "forbidden_keywords": [
+    "显然",
+    "容易得",
+    "同理可得"
+  ],
+  "key_facts": [
+    {
+      "desc": "给出 bn 的系数形式 4/(nπ)·sin(nπ/2)",
+      "any_of": [
+        "\\frac{4}{n\\pi}\\sin\\frac{n\\pi}{2}",
+        "4/(nπ)sin(nπ/2)",
+        "\\sin(n\\pi/2)"
+      ]
+    },
+    {
+      "desc": "说明在跳变点收敛到左右极限平均值",
+      "any_of": [
+        "平均值",
+        "左右极限",
+        "\\frac{1}{2}"
+      ]
+    }
+  ],
+  "token_facts": [
+    {
+      "desc": "给出奇次谐波系数与偶次谐波为零的结论",
+      "all_of": [
+        "n=1,3,5",
+        "偶次"
+      ],
+      "none_of": []
+    }
+  ],
+  "absent_facts": []
+}

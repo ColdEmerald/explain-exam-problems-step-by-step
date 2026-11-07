@@ -1,0 +1,59 @@
+{
+  "id": "signal-systems/02-convolution-piecewise",
+  "title": "连续时间卷积与分段讨论",
+  "subject": "信号与系统",
+  "tier": "A",
+  "mode": "standard",
+  "input": "input.md",
+  "reference": "reference.md",
+  "required_sections": [
+    "题型判断",
+    "第一眼突破口",
+    "逐步推导",
+    "解题思维复盘",
+    "核心套路总结",
+    "易错点",
+    "更快捷的方法",
+    "同类型变式题"
+  ],
+  "absent_sections": [],
+  "required_keywords": [
+    "卷积",
+    "分段",
+    "积分区间"
+  ],
+  "forbidden_keywords": [
+    "显然",
+    "容易得",
+    "同理可得"
+  ],
+  "key_facts": [
+    {
+      "desc": "给出 y(t) 的分段表达式",
+      "any_of": [
+        "(1-e^{-t})",
+        "1-e^{-t}",
+        "e^{-t}"
+      ]
+    }
+  ],
+  "token_facts": [
+    {
+      "desc": "包含 0<t<1 区间的结果 (1-e^{-t})",
+      "all_of": [
+        "1-e^{-t}",
+        "u(t)"
+      ],
+      "none_of": []
+    },
+    {
+      "desc": "包含 t>1 区间的结果 e^{-(t-1)}-e^{-t}",
+      "all_of": [
+        "e^{-(t-1)}",
+        "e^{-t}"
+      ],
+      "none_of": []
+    }
+  ],
+  "absent_facts": []
+}

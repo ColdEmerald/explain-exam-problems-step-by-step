@@ -40,6 +40,13 @@ explain-exam-problems-step-by-step/
 ├── SKILL.md                 # 技能主体：行为规范与固定讲解流程
 ├── agents/
 │   └── agent.yaml           # 展示信息、默认调用提示词与启用策略
+├── examples/                # 回归基准：样本、参考输出与判定规则
+│   ├── README.md            # 目录说明与样本选取原则
+│   ├── RUBRIC.md            # 判定规则与 judge 提示词模板
+│   ├── check.py             # 确定性检查脚本（Python 3，零第三方依赖）
+│   ├── signal-systems/      # 主线：信号与系统
+│   ├── postgrad-math/       # 副线：考研数学
+│   └── special-cases/       # 特殊情形：选择题 / 编程题 / 图片题 / 多问大题
 ├── README.md                # 项目说明文档
 └── LICENSE                  # MIT 许可证
 ```
@@ -123,14 +130,43 @@ $SKILLS_HOME/explain-exam-problems-step-by-step/agents/agent.yaml
 1. `SKILL.md` 使用 Markdown 描述技能的适用范围、核心原则、固定回答流程和特殊情形处理规则；各节使用 HTML 注释锚点（如 `<!-- section: main-flow -->`）便于差分追踪与局部覆盖。
 2. `agents/agent.yaml` 提供产品侧展示信息、默认提示词和隐式调用策略。
 3. 运行时由宿主模型读取技能指令，并结合用户题目生成结构化、可验证的中文讲解。
+4. `examples/` 提供**回归基准**：16 个固定样本（信号与系统 6、考研数学 6、特殊情形 4），配合 `check.py` 的确定性检查与 `RUBRIC.md` 的人工/judge 评分规则，用于验证 `SKILL.md` 改动后输出质量是否退化。该目录**不参与技能运行时**，模型推理时不会读取。
 
 项目没有业务代码和运行时服务，因此不需要编译、数据库或外部依赖。数学公式使用 LaTeX 形式（`$...$` / `$$...$$`）表达，平台不支持时退化为 ASCII 数学表达；编程题则根据题目语言给出带有适合初学者的代码注释和执行跟踪。
 
+## 回归基准
+
+`examples/` 是本项目的质量护栏。本技能是纯声明式的——没有可执行代码，因此「测试」只能落在模型输出的文本上。仓库提供：
+
+- **16 个固定样本**，覆盖 `SKILL.md` 中最容易退化的规则分支（分段讨论、积分区间、变换域、矩阵维度、程序执行过程、收敛域、因果稳定性），以及全部特殊情形（公式追问、概念追问、选择题、编程题、图片题、多问大题）。
+- **两级基线**：Tier A 含人工审定的参考输出（10 份），锚定输出风格与深度；Tier B 仅含检查清单（6 份），只校验结构与关键事实，维护成本低。
+- **`check.py`**：零第三方依赖的确定性检查器，校验章节齐全性、关键词、禁语、关键结论与 token 组合约束。
+- **`RUBRIC.md`**：五维质量评分标准（推导完整性、依据正确性、验算完备性、教学价值、表达质量）与 LLM-as-judge 提示词模板。
+
+快速上手：
+
+```bash
+python examples/check.py --list
+python examples/check.py --sample signal-systems/01-laplace-inverse --show
+python examples/check.py --sample signal-systems/01-laplace-inverse --output out.md
+```
+
+修改 `SKILL.md` 后的标准回归流程见 `examples/RUBRIC.md` 末节。
+
 ## 版本信息
 
-当前版本：**1.1.0**
+当前版本：**1.2.0**
 
 ### 更新日志
+
+#### 1.2.0（2026-11-07）
+
+- **新增** `examples/` 回归基准目录：16 个固定样本（信号与系统 6、考研数学 6、特殊情形 4）。
+- **新增** `examples/check.py`：零第三方依赖的确定性检查器，支持章节结构、关键词、禁语（限定扫描范围，避免误判「易错点」节的反例引用）、关键结论、token 组合约束与「结论必须缺席」判定。
+- **新增** `examples/RUBRIC.md`：五维质量评分标准与 LLM-as-judge 提示词模板。
+- **新增** 10 份 Tier A 人工审定参考输出，作为输出风格与深度的锚点。
+- **新增** `examples/_template/`：新增样本的模板目录。
+- **文档** 更新 README 项目结构、技术架构与贡献建议，说明回归基准的使用方式。
 
 #### 1.1.0（2026-11-07）
 
@@ -164,6 +200,8 @@ $SKILLS_HOME/explain-exam-problems-step-by-step/agents/agent.yaml
 - 避免用未经说明的技巧替代标准解法。
 - 新增学科只需在 `SKILL.md` 的"适用学科"节追加，无需修改其他文件。
 - PR 描述请按节/规则粒度说明变更内容（如"更新：第 6 步易错点范围从强制 3–5 改为按需"）。
+- **修改 `SKILL.md` 时请同步跑一遍回归基准**（`examples/RUBRIC.md` 末节有标准流程）。若改动影响到某个样本锁定的规则，请在 PR 中说明，并按需更新该样本的 `checks.json` 或 `reference.md`。
+- 新增样本请复制 `examples/_template/`，并说明该样本锁定了哪条规则。
 
 ## 许可证
 

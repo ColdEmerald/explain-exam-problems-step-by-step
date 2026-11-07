@@ -1,0 +1,56 @@
+{
+  "id": "postgrad-math/06-probability-distribution",
+  "title": "分布函数的分段表达式与期望",
+  "subject": "考研数学",
+  "tier": "B",
+  "mode": "standard",
+  "input": "input.md",
+  "reference": null,
+  "required_sections": [
+    "题型判断",
+    "第一眼突破口",
+    "逐步推导",
+    "解题思维复盘",
+    "核心套路总结",
+    "易错点",
+    "更快捷的方法",
+    "同类型变式题"
+  ],
+  "absent_sections": [],
+  "required_keywords": [
+    "分布函数",
+    "概率密度",
+    "期望",
+    "方差"
+  ],
+  "forbidden_keywords": [
+    "显然",
+    "容易得",
+    "同理可得"
+  ],
+  "key_facts": [
+    {
+      "desc": "给出密度 f(x)=2x",
+      "any_of": [
+        "2x",
+        "f(x)=2x"
+      ]
+    },
+    {
+      "desc": "给出期望 E[X]=2/3",
+      "any_of": [
+        "\\frac{2}{3}",
+        "2/3"
+      ]
+    },
+    {
+      "desc": "给出方差 D[X]=1/18",
+      "any_of": [
+        "\\frac{1}{18}",
+        "1/18"
+      ]
+    }
+  ],
+  "token_facts": [],
+  "absent_facts": []
+}

@@ -1,0 +1,70 @@
+{
+  "id": "signal-systems/05-z-transform-difference",
+  "title": "差分方程的 Z 变换求解",
+  "subject": "信号与系统",
+  "tier": "A",
+  "mode": "standard",
+  "input": "input.md",
+  "reference": "reference.md",
+  "required_sections": [
+    "题型判断",
+    "第一眼突破口",
+    "逐步推导",
+    "解题思维复盘",
+    "核心套路总结",
+    "易错点",
+    "更快捷的方法",
+    "同类型变式题"
+  ],
+  "absent_sections": [],
+  "required_keywords": [
+    "Z 变换",
+    "收敛域",
+    "稳定",
+    "单位冲激响应"
+  ],
+  "forbidden_keywords": [
+    "显然",
+    "容易得",
+    "同理可得"
+  ],
+  "key_facts": [
+    {
+      "desc": "给出系统函数 H(z)",
+      "any_of": [
+        "\\frac{1}{(1-0.25z^{-1})^2}",
+        "1/(1-0.25z^{-1})^2",
+        "\\frac{z^2}{(z-0.25)^2}"
+      ]
+    },
+    {
+      "desc": "给出冲激响应中的 n 因子（重根特征）",
+      "any_of": [
+        "n\\cdot",
+        "n(",
+        "(n+1)",
+        "0.25^n"
+      ]
+    }
+  ],
+  "token_facts": [
+    {
+      "desc": "出现 0.25 的幂次项",
+      "all_of": [
+        "0.25"
+      ],
+      "none_of": []
+    }
+  ],
+  "absent_facts": [],
+  "keyword_alternatives": {
+    "Z 变换": [
+      "Z 变换",
+      "Z变换"
+    ],
+    "收敛域": [
+      "收敛域",
+      "ROC"
+    ]
+  }
+}

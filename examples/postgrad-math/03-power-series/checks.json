@@ -1,0 +1,51 @@
+{
+  "id": "postgrad-math/03-power-series",
+  "title": "幂级数展开与收敛半径",
+  "subject": "考研数学",
+  "tier": "B",
+  "mode": "standard",
+  "input": "input.md",
+  "reference": null,
+  "required_sections": [
+    "题型判断",
+    "第一眼突破口",
+    "逐步推导",
+    "解题思维复盘",
+    "核心套路总结",
+    "易错点",
+    "更快捷的方法",
+    "同类型变式题"
+  ],
+  "absent_sections": [],
+  "required_keywords": [
+    "幂级数",
+    "收敛半径",
+    "收敛区间"
+  ],
+  "forbidden_keywords": [
+    "显然",
+    "容易得",
+    "同理可得"
+  ],
+  "key_facts": [
+    {
+      "desc": "给出收敛半径 R=1",
+      "any_of": [
+        "R=1",
+        "R = 1",
+        "收敛半径为1",
+        "\\rho=1"
+      ]
+    },
+    {
+      "desc": "给出系数表达式",
+      "any_of": [
+        "\\sum_{n=0}^{\\infty}\\left(\\sin\\frac{(n+1)\\pi}{3}\\right)x^n",
+        "sin\\frac{(n+1)\\pi}{3}",
+        "\\frac{2\\sqrt{3}}{3}\\sin\\frac{(n+1)\\pi}{3}"
+      ]
+    }
+  ],
+  "token_facts": [],
+  "absent_facts": []
+}

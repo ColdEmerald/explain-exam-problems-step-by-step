@@ -1,0 +1,59 @@
+{
+  "id": "signal-systems/06-sampling-aliasing",
+  "title": "奈奎斯特采样与频谱混叠",
+  "subject": "信号与系统",
+  "tier": "A",
+  "mode": "standard",
+  "input": "input.md",
+  "reference": "reference.md",
+  "required_sections": [
+    "题型判断",
+    "第一眼突破口",
+    "逐步推导",
+    "解题思维复盘",
+    "核心套路总结",
+    "易错点",
+    "更快捷的方法",
+    "同类型变式题"
+  ],
+  "absent_sections": [],
+  "required_keywords": [
+    "奈奎斯特",
+    "混叠",
+    "采样",
+    "折叠"
+  ],
+  "forbidden_keywords": [
+    "显然",
+    "容易得",
+    "同理可得"
+  ],
+  "key_facts": [
+    {
+      "desc": "给出奈奎斯特频率 600 Hz",
+      "any_of": [
+        "600",
+        "f_s/2",
+        "fs/2"
+      ]
+    },
+    {
+      "desc": "给出混叠后 800 Hz 折叠为 400 Hz",
+      "any_of": [
+        "400",
+        "800-400",
+        "1200-800"
+      ]
+    },
+    {
+      "desc": "给出混叠后 1600 Hz 折叠为 400 Hz 的相反方向（或 800 Hz）",
+      "any_of": [
+        "400",
+        "1600",
+        "800"
+      ]
+    }
+  ],
+  "token_facts": [],
+  "absent_facts": []
+}

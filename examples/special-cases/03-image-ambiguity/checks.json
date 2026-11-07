@@ -1,0 +1,45 @@
+{
+  "id": "special-cases/03-image-ambiguity",
+  "title": "图片题的歧义符号暂停协议",
+  "subject": "信号与系统",
+  "tier": "B",
+  "mode": "pause",
+  "input": "input.md",
+  "reference": null,
+  "required_sections": [],
+  "absent_sections": [
+    "核心套路总结",
+    "同类型变式题",
+    "更快捷的方法"
+  ],
+  "required_keywords": [
+    "不确定",
+    "确认"
+  ],
+  "forbidden_keywords": [
+    "显然",
+    "容易得",
+    "同理可得"
+  ],
+  "key_facts": [],
+  "token_facts": [
+    {
+      "desc": "明确指出系数无法确认并请求用户确认",
+      "all_of": [
+        "无法确认",
+        "确认"
+      ],
+      "none_of": []
+    }
+  ],
+  "absent_facts": [
+    {
+      "desc": "未给出基于猜测系数得出的具体冲激响应表达式",
+      "any_of": [
+        "\\frac{K}{s^2+4s+2}",
+        "\\frac{K}{s^2+as+2}",
+        "h(t)="
+      ]
+    }
+  ]
+}
